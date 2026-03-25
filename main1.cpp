@@ -90,22 +90,5 @@ void uartTask()
                 }
             }
         }
-        if (receivedChar != '1' && receivedChar != '2' && receivedChar != '3' &&
-            receivedChar != '4' && receivedChar != '5' && receivedChar != '6') {
-            uartUsb.write("Available commands:\r\n",
-                strlen("Available commands:\r\n"));
-            uartUsb.write("'1' Trigger gas alarm\r\n",
-                strlen("'1' Trigger gas alarm\r\n"));
-            uartUsb.write("'2' Get gas alarm state\r\n",
-                strlen("'2' Get gas alarm state\r\n"));
-            uartUsb.write("'3' Get temp alarm state\r\n",
-                strlen("'3' Get temp alarm state\r\n"));
-            uartUsb.write("'4' Trigger over-temp alarm\r\n",
-                strlen("'4' Trigger over-temp alarm\r\n"));
-            uartUsb.write("'5' Reset all alarms\r\n",
-                strlen("'5' Reset all alarms\r\n"));
-            uartUsb.write("'6' Toggle monitoring mode\r\n",
-                strlen("'6' Toggle monitoring mode\r\n"));
-        }
     }
 }
